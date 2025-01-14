@@ -3,6 +3,7 @@ import pages from "../constants/pages.js";
 // Change Title based on pages
 const getTitle = () => {
     const path = window.location.pathname;
+    console.log(path);
 
     if (pages[path]) {
         document.title = `EcoMart | ${pages[path]}`;
@@ -27,9 +28,10 @@ navbar.innerHTML = `
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
