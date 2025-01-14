@@ -15,7 +15,7 @@ body {
     background-image: url(../assets/images/hero-bg-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     min-height: 80vh;
     display: grid;
@@ -41,4 +41,28 @@ body {
     width: 100%;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
     border-radius: 1rem;
+}
+
+/* About Section  */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    max-width: 25rem;
+}
+
+.about-title {
+    font-weight: bold;
+    font-size: 2rem;
 }
