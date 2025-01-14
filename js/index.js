@@ -1,4 +1,5 @@
 import pages from "../constants/pages.js";
+import featuredProducts from "../data/featuredProducts.js";
 
 // Change Title based on pages
 const getTitle = () => {
@@ -38,3 +39,23 @@ navbar.innerHTML = `
     `
 
 navbarContainer.appendChild(navbar);
+
+// Get Featured Products
+const featuredProductsList = document.getElementById("featured-products-list");
+
+
+featuredProducts.map((featuredProduct) => {
+    const featuredProductCard = document.createElement("div");
+    featuredProductCard.className = "featured-product-card";
+    console.log(featuredProduct);
+
+    featuredProductCard.innerHTML = `
+            <img src=${featuredProduct.image} alt=${featuredProduct.name}>
+            <div>
+                <h1>${featuredProduct.name}</h1>
+                <p>${featuredProduct.description}</p>
+                <h5>${featuredProduct.price}</h5>
+            </div>
+        `
+    featuredProductsList.appendChild(featuredProductCard);
+})

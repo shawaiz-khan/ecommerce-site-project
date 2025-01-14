@@ -46,7 +46,7 @@ body {
 /* About Section  */
 .about-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     align-items: center;
     gap: 2rem;
     padding: 2rem;
@@ -59,7 +59,8 @@ body {
 }
 
 .about-img img {
-    max-width: 25rem;
+    max-width: 23rem;
+    border-radius: 1rem;
 }
 
 .about-title {
