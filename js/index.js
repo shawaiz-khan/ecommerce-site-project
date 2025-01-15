@@ -46,15 +46,19 @@ const featuredProductsList = document.getElementById("featured-products-list");
 
 featuredProducts.map((featuredProduct) => {
     const featuredProductCard = document.createElement("div");
-    featuredProductCard.className = "featured-product-card";
+    featuredProductCard.className = "featured-product-card bg-light p-4";
     console.log(featuredProduct);
 
     featuredProductCard.innerHTML = `
             <img src=${featuredProduct.image} alt=${featuredProduct.name}>
             <div>
-                <h1>${featuredProduct.name}</h1>
+                <h1 class="fs-4">${featuredProduct.name}</h1>
                 <p>${featuredProduct.description}</p>
-                <h5>${featuredProduct.price}</h5>
+                <h5>$ ${featuredProduct.price} </h5>
+            </div>
+            <div>
+                <button class="btn btn-primary">Buy Now</button>
+                <button class="btn btn-success">Add to Cart</button>
             </div>
         `
     featuredProductsList.appendChild(featuredProductCard);

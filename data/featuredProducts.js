@@ -1,38 +1,38 @@
 const featuredProducts = [
     {
         id: 1,
-        name: "Men's Casual Shirt",
-        price: 29.99,
-        description: "A comfortable and stylish casual shirt perfect for everyday wear.",
-        image: "https://source.unsplash.com/300x300/?shirt,men"
+        name: "Men's Basketball Uniform",
+        price: 49.99,
+        description: "High-quality basketball uniform designed for performance and style.",
+        image: "https://source.unsplash.com/300x300/?basketball,uniform,men"
     },
     {
         id: 2,
-        name: "Men's Leather Jacket",
-        price: 129.99,
-        description: "Premium leather jacket that adds style and sophistication.",
-        image: "https://source.unsplash.com/300x300/?leather,jacket,men"
+        name: "Men's Cricket Uniform",
+        price: 59.99,
+        description: "Lightweight and durable cricket uniform for optimal comfort.",
+        image: "https://source.unsplash.com/300x300/?cricket,uniform,men"
     },
     {
         id: 3,
-        name: "Men's Running Shoes",
-        price: 59.99,
-        description: "Lightweight running shoes built for performance.",
-        image: "https://source.unsplash.com/300x300/?running,shoes,men"
+        name: "Men's Rugby Uniform",
+        price: 65.99,
+        description: "Sturdy rugby uniform designed for intense gameplay.",
+        image: "https://source.unsplash.com/300x300/?rugby,uniform,men"
     },
     {
         id: 4,
-        name: "Men's Winter Coat",
-        price: 99.99,
-        description: "A warm winter coat to keep you cozy during cold weather.",
-        image: "https://source.unsplash.com/300x300/?winter,coat,men"
+        name: "Men's Cycling Uniform",
+        price: 45.99,
+        description: "Aerodynamic cycling uniform for professional and recreational riders.",
+        image: "https://source.unsplash.com/300x300/?cycling,uniform,men"
     },
     {
         id: 5,
-        name: "Men's Suit",
-        price: 179.99,
-        description: "A sophisticated suit for formal events.",
-        image: "https://source.unsplash.com/300x300/?men,suit"
+        name: "Men's Soccer Uniform",
+        price: 39.99,
+        description: "Classic soccer uniform for comfort and performance on the field.",
+        image: "https://source.unsplash.com/300x300/?soccer,uniform,men"
     }
 ];
 

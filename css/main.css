@@ -67,3 +67,21 @@ body {
     font-weight: bold;
     font-size: 2rem;
 }
+
+/* Featured Products Section  */
+.featured-product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.featured-products-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
