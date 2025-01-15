@@ -45,16 +45,16 @@ const featuredProductsList = document.getElementById("featured-products-list");
 
 featuredProducts.map((featuredProduct) => {
     const featuredProductCard = document.createElement("div");
-    featuredProductCard.className = "featured-product-card p-4";
+    featuredProductCard.className = "bg-white p-4";
 
     featuredProductCard.innerHTML = `
             <img src="${featuredProduct.image}" alt="${featuredProduct.name}" class="img-fluid mb-3">
             <div>
-                <h1 class="fs-4">${featuredProduct.name}</h1>
+                <h1 class="fs-4 fw-bold">${featuredProduct.name}</h1>
                 <p>${featuredProduct.description}</p>
-                <h5 class="my-3">$ ${featuredProduct.price} </h5>
+                <h5 class="my-3 fs-5 fw-bold">$ ${featuredProduct.price} </h5>
             </div>
-            <div>
+            <div class="featured-product-btn-container">
                 <button class="btn btn-primary">Buy Now</button>
                 <button class="btn btn-success">Add to Cart</button>
             </div>

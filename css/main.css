@@ -59,7 +59,7 @@ body {
 }
 
 .about-img img {
-    max-width: 23rem;
+    max-width: 20rem;
     border-radius: 1rem;
 }
 
@@ -80,18 +80,28 @@ body {
 .featured-products-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
     align-items: center;
-    width: 100%;
-}
-
-.featured-product-card {
-    background-color: white;
+    width: 90%;
 }
 
 .featured-product-title {
     font-weight: bold;
     font-size: 2rem;
     margin-bottom: 1.5rem;
+}
+
+.featured-product-btn-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.featured-product-btn-container button {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
 }
