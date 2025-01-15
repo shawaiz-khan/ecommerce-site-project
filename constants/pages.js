@@ -1,8 +1,8 @@
 const pages = {
-    "/index.html": "Home",
-    "/pages/about.html": "About",
-    "/pages/shop.html": "Shop",
-    "/pages/contact.html": "Contact",
+    "index.html": "Home",
+    "about.html": "About",
+    "shop.html": "Shop",
+    "contact.html": "Contact",
 };
 
 export default pages;

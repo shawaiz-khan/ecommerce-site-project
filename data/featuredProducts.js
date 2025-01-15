@@ -25,7 +25,7 @@ const featuredProducts = [
         name: "Cycling Uniform",
         price: 45.99,
         description: "Aerodynamic cycling uniform for professional and recreational riders.",
-        image: "../assets/products/Cycling Uniform/Post 1/H8eab3d4565564c20b74906c4e98f7979c.jpg_720x720q50.avif"
+        image: "../assets/products/Cycling Uniform/Post 1/H99a79988ef824d37a2b108aeb3d337f3K.jpg_720x720q50.avif"
     },
     {
         id: 5,
