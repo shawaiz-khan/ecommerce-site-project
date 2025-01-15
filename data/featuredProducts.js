@@ -1,38 +1,45 @@
 const featuredProducts = [
     {
         id: 1,
-        name: "Men's Basketball Uniform",
+        name: "Basketball Uniform",
         price: 49.99,
         description: "High-quality basketball uniform designed for performance and style.",
-        image: "https://source.unsplash.com/300x300/?basketball,uniform,men"
+        image: "../assets/products/Basketball Uniform/Post 2/A421894931b234de6994122c867aa0de9F.jpg_720x720q50.avif"
     },
     {
         id: 2,
-        name: "Men's Cricket Uniform",
+        name: "Cricket Uniform",
         price: 59.99,
         description: "Lightweight and durable cricket uniform for optimal comfort.",
-        image: "https://source.unsplash.com/300x300/?cricket,uniform,men"
+        image: "../assets/products/Cricket Uniform/Post 1/A24ec51aba6064ac8bf98d85baabcdb2cx.jpg_720x720q50.avif"
     },
     {
         id: 3,
-        name: "Men's Rugby Uniform",
+        name: "Rugby Uniform",
         price: 65.99,
         description: "Sturdy rugby uniform designed for intense gameplay.",
-        image: "https://source.unsplash.com/300x300/?rugby,uniform,men"
+        image: "../assets/products/Rugby Uniform/Post 1/A167883f4e973459ca49b02e230006369p.png_720x720q50.avif"
     },
     {
         id: 4,
-        name: "Men's Cycling Uniform",
+        name: "Cycling Uniform",
         price: 45.99,
         description: "Aerodynamic cycling uniform for professional and recreational riders.",
-        image: "https://source.unsplash.com/300x300/?cycling,uniform,men"
+        image: "../assets/products/Cycling Uniform/Post 1/H8eab3d4565564c20b74906c4e98f7979c.jpg_720x720q50.avif"
     },
     {
         id: 5,
-        name: "Men's Soccer Uniform",
+        name: "Soccer Uniform",
         price: 39.99,
         description: "Classic soccer uniform for comfort and performance on the field.",
-        image: "https://source.unsplash.com/300x300/?soccer,uniform,men"
+        image: "../assets/products/Soccer Uniform/Post 1/Hc007ce482fde46c883eca75632300d08l.png_720x720q50.avif"
+    },
+    {
+        id: 6,
+        name: "Baseball Uniform",
+        price: 46.99,
+        description: "Classic soccer uniform for comfort and performance on the field.",
+        image: "../assets/products/Baseball Uniform/Post 1/HTB12t9GcG5s3KVjSZFNq6AD3FXaA.jpg_720x720q50.avif"
     }
 ];
 

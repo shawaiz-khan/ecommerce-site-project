@@ -85,3 +85,13 @@ body {
     align-items: center;
     width: 100%;
 }
+
+.featured-product-card {
+    background-color: white;
+}
+
+.featured-product-title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}

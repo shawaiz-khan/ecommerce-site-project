@@ -4,7 +4,6 @@ import featuredProducts from "../data/featuredProducts.js";
 // Change Title based on pages
 const getTitle = () => {
     const path = window.location.pathname;
-    console.log(path);
 
     if (pages[path]) {
         document.title = `EcoMart | ${pages[path]}`;
@@ -46,15 +45,14 @@ const featuredProductsList = document.getElementById("featured-products-list");
 
 featuredProducts.map((featuredProduct) => {
     const featuredProductCard = document.createElement("div");
-    featuredProductCard.className = "featured-product-card bg-light p-4";
-    console.log(featuredProduct);
+    featuredProductCard.className = "featured-product-card p-4";
 
     featuredProductCard.innerHTML = `
-            <img src=${featuredProduct.image} alt=${featuredProduct.name}>
+            <img src="${featuredProduct.image}" alt="${featuredProduct.name}" class="img-fluid mb-3">
             <div>
                 <h1 class="fs-4">${featuredProduct.name}</h1>
                 <p>${featuredProduct.description}</p>
-                <h5>$ ${featuredProduct.price} </h5>
+                <h5 class="my-3">$ ${featuredProduct.price} </h5>
             </div>
             <div>
                 <button class="btn btn-primary">Buy Now</button>
