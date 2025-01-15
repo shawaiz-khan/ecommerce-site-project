@@ -1,8 +1,7 @@
-// Import dependencies
 import pages from "../constants/pages.js";
 import featuredProducts from "../data/featuredProducts.js";
 
-// Change Title Based on Pages
+// Custom Title
 const getTitle = () => {
     const path = window.location.pathname.split("/").pop();
     console.log(path);
@@ -12,12 +11,13 @@ const getTitle = () => {
 getTitle();
 
 // Navbar Template
-const navbarContainer = document.getElementById("navbar-container");
-const navbar = document.createElement("nav");
+const loadNavbar = () => {
+    const navbarContainer = document.getElementById("navbar-container");
+    const navbar = document.createElement("nav");
 
-navbar.classList.add("navbar", "navbar-expand-lg", "navbar-light", "bg-light", "text-dark");
+    navbar.classList.add("navbar", "navbar-expand-lg", "navbar-light", "bg-light", "text-dark");
 
-navbar.innerHTML = `
+    navbar.innerHTML = `
     <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">EcoMart</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,38 +34,19 @@ navbar.innerHTML = `
     </div>
 `;
 
-navbarContainer.appendChild(navbar);
+    navbarContainer.appendChild(navbar);
+}
 
-// Featured Products Template
-const featuredProductsList = document.getElementById("featured-products-list");
-
-featuredProducts.map((featuredProduct) => {
-    const featuredProductCard = document.createElement("div");
-    featuredProductCard.className = "card shadow-sm mb-4";
-
-    featuredProductCard.innerHTML = `
-        <img src="${featuredProduct.image}" alt="Image of ${featuredProduct.name}" class="card-img-top">
-        <div class="card-body">
-            <h5 class="card-title">${featuredProduct.name}</h5>
-            <p class="card-text">${featuredProduct.description}</p>
-            <h6 class="card-subtitle mb-3 text-muted">$${featuredProduct.price}</h6>
-            <div class="d-flex justify-content-start gap-2">
-                <button class="btn btn-primary btn-sm" aria-label="Buy ${featuredProduct.name} now">Buy Now</button>
-                <button class="btn btn-success btn-sm" aria-label="Add ${featuredProduct.name} to cart">Add to Cart</button>
-            </div>
-        </div>
-    `;
-
-    featuredProductsList.appendChild(featuredProductCard);
-});
+loadNavbar();
 
 // Footer Template
-const footerContainer = document.getElementById("footer-container");
-const footer = document.createElement("footer");
+const loadFooter = () => {
+    const footerContainer = document.getElementById("footer-container");
+    const footer = document.createElement("footer");
 
-footer.classList.add("footer", "bg-light", "text-dark", "py-4");
+    footer.classList.add("footer", "bg-light", "text-dark", "py-4");
 
-footer.innerHTML = `
+    footer.innerHTML = `
     <div class="container text-center">
         <h1 class="h4 mb-3">EcoMart</h1>
         <ul class="nav flex-column flex-sm-row justify-content-center mb-3">
@@ -86,4 +67,34 @@ footer.innerHTML = `
     </div>
 `;
 
-footerContainer.appendChild(footer);
+    footerContainer.appendChild(footer);
+}
+
+loadFooter();
+
+// Featured Products Template
+const loadFeaturedProducts = () => {
+    const featuredProductsList = document.getElementById("featured-products-list");
+
+    featuredProducts.map((featuredProduct) => {
+        const featuredProductCard = document.createElement("div");
+        featuredProductCard.className = "card shadow-sm mb-4";
+
+        featuredProductCard.innerHTML = `
+        <img src="${featuredProduct.image}" alt="Image of ${featuredProduct.name}" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">${featuredProduct.name}</h5>
+            <p class="card-text">${featuredProduct.description}</p>
+            <h6 class="card-subtitle mb-3 text-muted">$${featuredProduct.price}</h6>
+            <div class="d-flex justify-content-start gap-2">
+                <button class="btn btn-primary btn-sm" aria-label="Buy ${featuredProduct.name} now">Buy Now</button>
+                <button class="btn btn-success btn-sm" aria-label="Add ${featuredProduct.name} to cart">Add to Cart</button>
+            </div>
+        </div>
+    `;
+
+        featuredProductsList.appendChild(featuredProductCard);
+    });
+}
+
+loadFeaturedProducts();
