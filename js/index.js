@@ -1,5 +1,6 @@
 import pages from "../constants/pages.js";
 import featuredProducts from "../data/featuredProducts.js";
+import products from "../data/products.js";
 
 // Custom Title
 const getTitle = () => {
@@ -8,11 +9,15 @@ const getTitle = () => {
     document.title = pages[path] ? `EcoMart | ${pages[path]}` : "Page Not Found";
 };
 
-getTitle();
-
 // Navbar Template
 const loadNavbar = () => {
     const navbarContainer = document.getElementById("navbar-container");
+
+    if (!navbarContainer) {
+        console.error("Navbar container not found!");
+        return;
+    }
+
     const navbar = document.createElement("nav");
 
     navbar.classList.add("navbar", "navbar-expand-lg", "navbar-light", "bg-light", "text-dark");
@@ -37,11 +42,15 @@ const loadNavbar = () => {
     navbarContainer.appendChild(navbar);
 }
 
-loadNavbar();
-
 // Footer Template
 const loadFooter = () => {
     const footerContainer = document.getElementById("footer-container");
+
+    if (!footerContainer) {
+        console.error("Footer container not found!");
+        return;
+    }
+
     const footer = document.createElement("footer");
 
     footer.classList.add("footer", "bg-light", "text-dark", "py-4");
@@ -70,22 +79,25 @@ const loadFooter = () => {
     footerContainer.appendChild(footer);
 }
 
-loadFooter();
-
-// Featured Products Template
+// Load Featured Products
 const loadFeaturedProducts = () => {
     const featuredProductsList = document.getElementById("featured-products-list");
 
+    if (!featuredProductsList) {
+        console.error("Featured Products not found!");
+        return;
+    }
+
     featuredProducts.map((featuredProduct) => {
         const featuredProductCard = document.createElement("div");
-        featuredProductCard.className = "card shadow-sm mb-4";
+        featuredProductCard.className = "card shadow-sm mb-4 h-100 product-cards";
 
         featuredProductCard.innerHTML = `
         <img src="${featuredProduct.image}" alt="Image of ${featuredProduct.name}" class="card-img-top">
-        <div class="card-body">
+        <div class="card-body product-card-body">
             <h5 class="card-title">${featuredProduct.name}</h5>
             <p class="card-text">${featuredProduct.description}</p>
-            <h6 class="card-subtitle mb-3 text-muted">$${featuredProduct.price}</h6>
+            <h6 class="card-subtitle mb-3 text-dark fs-6 fw-bold">Price: $${featuredProduct.price}</h6>
             <div class="d-flex justify-content-start gap-2">
                 <button class="btn btn-primary btn-sm" aria-label="Buy ${featuredProduct.name} now">Buy Now</button>
                 <button class="btn btn-success btn-sm" aria-label="Add ${featuredProduct.name} to cart">Add to Cart</button>
@@ -97,4 +109,44 @@ const loadFeaturedProducts = () => {
     });
 }
 
-loadFeaturedProducts();
+// Load All Products
+const loadProducts = () => {
+    const productList = document.getElementById("products-list");
+
+    if (!productList) {
+        console.error("Product List not found!");
+        return;
+    }
+
+    products.map((product) => {
+        const productCard = document.createElement("div");
+        productCard.className = "card shadow-sm mb-4 h-100 product-cards";
+
+        productCard.innerHTML = `
+            <img src="${product.image}" alt="Image of ${product.name}" class="card-img-top">
+            <div class="card-body product-card-body">
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text">${product.description}</p>
+                <h6 class="card-subtitle mb-3 text-dark fs-6 fw-bold">Price: $${product.price}</h6>
+                <div class="d-flex justify-content-start gap-2">
+                    <button class="btn btn-primary btn-sm" aria-label="Buy ${product.name} now">Buy Now</button>
+                    <button class="btn btn-success btn-sm" aria-label="Add ${product.name} to cart">Add to Cart</button>
+                </div>
+            </div>
+        `;
+
+        productList.appendChild(productCard);
+    });
+}
+
+// Initialize DOM
+const initializeDOM = () => {
+    getTitle();
+    loadNavbar();
+    loadFooter();
+    loadFeaturedProducts();
+    loadProducts();
+}
+
+// DOM Events
+document.addEventListener("DOMContentLoaded", initializeDOM);

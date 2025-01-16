@@ -64,7 +64,8 @@ body {
 }
 
 /* Featured Products Section  */
-.featured-product-container {
+.featured-product-container,
+.products-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,16 +73,19 @@ body {
     padding: 2rem;
 }
 
-.featured-products-list {
+.featured-products-list,
+.products-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
     width: 90%;
+    height: 100%;
 }
 
-.featured-product-title {
+.featured-product-title,
+.product-title {
     font-weight: bold;
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -152,4 +156,16 @@ body {
 textarea {
     width: 100%;
     margin: 0 0 0.5rem 0;
+}
+
+/* All Products Section  */
+.product-cards {
+    overflow: hidden;
+}
+
+.product-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
