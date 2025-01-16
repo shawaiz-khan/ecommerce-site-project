@@ -39,7 +39,7 @@
                 environmental damage through excessive use of water, chemicals, and synthetic fibers. At EcoMart, we
                 strive to change that by using organic cotton, recycled materials, and natural dyes in our products. We
                 believe that fashion doesn’t have to cost the earth, and it shouldn’t have to harm it either.</p>
-            <button class="btn btn-outline-primary">Read More</button>
+            <a href="./pages/about.html"><button class="btn btn-outline-primary">Read More</button></a>
         </div>
         <div class="about-img">
             <img src="./assets/images/about-img.jpg" alt="EcoMart">
@@ -49,7 +49,11 @@
     <div class="featured-product-container bg-light">
         <h1 class="featured-product-title">Featured Products</h1>
         <div class="featured-products-list" id="featured-products-list"></div>
-        <button class="btn btn-outline-dark mt-4 show-featured-products">Browse All Products</button>
+        <a href="./pages/shop.html">
+            <button class="btn btn-outline-dark mt-4 show-featured-products">
+                Browse All Products
+            </button>
+        </a>
     </div>
     <!-- Contact Section  -->
     <div class="bg-white contact-container">
@@ -57,8 +61,8 @@
         <p class="text-secondary fs-6">Leave us a Message</p>
         <form class="w-25 contact-form">
             <div class="contact-btns mb-3">
-                <input type="text" class="form-control" placeholder="Email">
-                <input type="text" class="form-control" placeholder="Password">
+                <input type="text" class="form-control" placeholder="Email" required>
+                <input type="text" class="form-control" placeholder="Password" required>
             </div>
             <button type="button" class="btn btn-success">Send Message</button>
         </form>
